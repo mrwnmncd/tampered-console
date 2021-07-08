@@ -1,0 +1,27 @@
+{
+  "name": "tampered-console",
+  "version": "1.0.0",
+  "description": "Fancy Console",
+  "main": "console.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrwnmncd/tampered-console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrwnmncd/tampered-console/issues"
+  },
+  "scripts": {
+    "ci": "node test/bruteforce.js"
+  },
+  "keywords": [
+    "fancy-console",
+    "console",
+    "cli"
+  ],
+  "author": "mrwnmncd",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "debug": "^4.3.2"
+  }
+}
