@@ -148,8 +148,7 @@ function globalConsole(options) {
     if (!overrideNative || overrideNative === false) {
       if (autoInspect === true) {
         new Console('tampered-console-c').debug('static-console-just-inspect');
-        const { log, warn, error } = require('./static-console-just-inspect');
-        const { debug } = require('./static-debug');
+        const { log, debug, warn, error } = require('./static-console-just-inspect');
         console.log = log;
         console.warn = warn;
         console.error = error;
