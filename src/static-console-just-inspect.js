@@ -9,6 +9,9 @@ const sc = ':';
 function log(args) {
   cl(util.inspect(args));
 }
+function debug(args) {
+  cl(util.inspect(args));
+}
 function warn(args) {
   clw(util.inspect(args));
 }
@@ -16,4 +19,4 @@ function error(args) {
   cle(util.inspect(args));
 }
 
-module.exports = { log, warn, error };
+module.exports = { log, debug, warn, error };
