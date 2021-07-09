@@ -1,8 +1,8 @@
 {
   "name": "tampered-console",
   "version": "1.0.0",
-  "description": "Fancy Console",
-  "main": "console.js",
+  "description": "Decorated Node Console",
+  "main": "src/console.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrwnmncd/tampered-console.git"
