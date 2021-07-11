@@ -185,6 +185,7 @@ function globalConsole(options) {
         console.warn = warn;
         console.error = error;
         console.debug = debug;
+        delete console.worker;
         return;
       }
       new Console('tampered-console-c').debug('native-console');
