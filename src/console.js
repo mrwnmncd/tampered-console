@@ -30,10 +30,12 @@ class Console {
       this._inspect = inspect || false;
       if (inspect && typeof inspect !== 'boolean') {
         this._inspect = false;
-        console.log(
-          chalk.bold.gray(
-            `fancy-console: inspect is not a boolean, assumed ${this._inspect}`,
-          ),
+        clw(
+          dsb +
+            chalk.bold.keyword('orange')(app + sc) +
+            chalk.bold.gray('tampered-console') +
+            sb +
+            `'inspect' option is not a boolean, assumed ${this._inspect}`,
         );
       }
     }
