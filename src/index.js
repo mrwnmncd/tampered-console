@@ -12,6 +12,6 @@ const { globalConsole } = require('./overrides');
   module.exports.globalConsole = globalConsole;
 }
 {
-  const { log, warn, error } = require('./static-console-just-inspect');
-  module.exports.inspect = { log, warn, error };
+  const { log, worker, warn, error } = require('./static-console-inspect');
+  module.exports.inspect = { log, worker, warn, error };
 }
