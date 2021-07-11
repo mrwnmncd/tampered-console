@@ -1,15 +1,15 @@
 const Console = require('./console');
 require('./init');
 /**
- * Could be an object
  * @param {object|boolean} options options for global `console`
- * @example globalConsole({override: true, inspect: false})
+ * @example
+ * globalConsole({ fancy: false, inspect: true });
+ * globalConsole(true);
  */
 function globalConsole(options) {
   let overrideNative = true;
   let autoInspect = false;
   let globalNamespace = false;
-  //let autoNamespace = '';
   {
     switch (typeof options) {
       case 'object': {
@@ -32,14 +32,41 @@ function globalConsole(options) {
             `'namespace' option is not a boolean, assumed ${inspect}`,
           );
         }
-        overrideNative = fancy;
-        autoInspect = inspect || false;
-        globalNamespace = namespace || false;
-        if (
-          (!fancy && !autoInspect && namespace === true) ||
-          (!fancy && autoInspect === true && namespace === true)
-        )
-          overrideNative = true;
+        {
+          switch (fancy) {
+            case true:
+            case false:
+              fancy = fancy;
+              break;
+            default:
+              fancy = true;
+              break;
+          }
+          switch (inspect) {
+            case true:
+            case false:
+              inspect = inspect;
+              break;
+            default:
+              inspect = false;
+              break;
+          }
+          switch (namespace) {
+            case true:
+              fancy = true;
+            case false:
+              namespace = namespace;
+              break;
+            default:
+              namespace = false;
+              break;
+          }
+        }
+        {
+          overrideNative = fancy;
+          autoInspect = inspect;
+          globalNamespace = namespace;
+        }
         new Console('tampered-console-object').debug(
           `overrideNative: ${overrideNative}`,
         );
@@ -148,7 +175,12 @@ function globalConsole(options) {
     if (!overrideNative || overrideNative === false) {
       if (autoInspect === true) {
         new Console('tampered-console-c').debug('static-console-just-inspect');
-        const { log, debug, warn, error } = require('./static-console-just-inspect');
+        const {
+          log,
+          debug,
+          warn,
+          error,
+        } = require('./static-console-just-inspect');
         console.log = log;
         console.warn = warn;
         console.error = error;
