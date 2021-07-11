@@ -1,5 +1,5 @@
 {
-  "name": "tampered-console",
+  "name": "@mrwnmncd/tampered-console",
   "version": "1.0.0",
   "description": "Decorated Node Console",
   "main": "src/console.js",
@@ -9,6 +9,9 @@
   },
   "bugs": {
     "url": "https://github.com/mrwnmncd/tampered-console/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "ci": "node test/bruteforce.js"
