@@ -1,8 +1,8 @@
 {
   "name": "@mrwnmncd/tampered-console",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Decorated Node Console",
-  "main": "src/console.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrwnmncd/tampered-console.git"
@@ -14,7 +14,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "ci": "node test/bruteforce.js"
+    "ci": "node test/ci.js"
   },
   "keywords": [
     "fancy-console",
