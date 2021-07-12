@@ -26,34 +26,6 @@ npm install @mrwnmncd/tampered-console
 
 ---
 
-## Examples
+### Examples
 
-#### Normal Log
-```js
-const Console = require('@mrwnmncd/tampered-console');
-console.log('typical console log');
-Console.log('redesigned console log');
-new Console().log('instanciated console log');
-```
-#### Namespace
-```js
-const Console = require('@mrwnmncd/tampered-console');
-new Console('namespace').log('instanciated console log with namespace');
-new Console({ name: 'namespace' }).log(
-  'instanciated console log with inspect option and namespace',
-);
-```
-#### Inspect
-```js
-const Console = require('@mrwnmncd/tampered-console');
-new Console({ inspect: true }).log(
-  'instanciated console log with inspect option',
-);
-```
-#### Namespace & Inspect
-```js
-const Console = require('@mrwnmncd/tampered-console');
-new Console({ inspect: true, name: 'namespace' }).log(
-  'instanciated console log with inspect option and namespace',
-);
-```
+> *examples are still being worked on in the repository's wiki...*
