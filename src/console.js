@@ -28,16 +28,7 @@ class Console {
       const { name, inspect } = options;
       this._namespace = name;
       this._inspect = inspect || false;
-      if (inspect && typeof inspect !== 'boolean') {
-        this._inspect = false;
-        clw(
-          dsb +
-            chalk.bold.keyword('orange')(app + sc) +
-            chalk.bold.gray('tampered-console') +
-            sb +
-            `'inspect' option is not a boolean, assumed ${this._inspect}`,
-        );
-      }
+      if (inspect && typeof inspect !== 'boolean') this._inspect = false;
     }
   }
   log(args) {
