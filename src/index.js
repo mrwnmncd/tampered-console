@@ -1,10 +1,8 @@
 /*
-
-mrwnmncd (c) 2021 
+mrwnmncd (c) 2021
 https://github.com/mrwnmncd 
-
 */
-
+'use strict';
 const Console = require('./console');
 const { globalConsole } = require('./overrides');
 {

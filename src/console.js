@@ -156,5 +156,4 @@ class Console {
     debug(app)(util.inspect(args));
   }
 }
-
 module.exports = Console;

@@ -1,4 +1,4 @@
-const Console = require('./console');
+'use strict';
 require('./init');
 /**
  * @param {object|boolean} options options for global `console`

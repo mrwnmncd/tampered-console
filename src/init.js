@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   if (!console.$native) {
     console.$native = {};
@@ -7,8 +8,8 @@
     console.$native.debug = console.debug;
   }
 })();
-
-
-exports.cl = console.$native.log;
-exports.clw = console.$native.warn;
-exports.cle = console.$native.error;
+{
+  exports.cl = console.$native.log;
+  exports.clw = console.$native.warn;
+  exports.cle = console.$native.error;
+}
