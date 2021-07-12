@@ -1,10 +1,6 @@
 'use strict';
-const chalk = require('chalk');
 const util = require('util');
 const { cl, clw, cle } = require('./init');
-const sb = ' ';
-const dsb = '  ';
-const sc = ':';
 /* TODO : spread args params */
 function log(args) {
   cl(util.inspect(args));
