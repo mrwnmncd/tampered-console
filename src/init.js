@@ -1,15 +1,10 @@
 'use strict';
-(function () {
-  if (!console.$native) {
-    console.$native = {};
-    console.$native.log = console.log;
-    console.$native.warn = console.warn;
-    console.$native.error = console.error;
-    console.$native.debug = console.debug;
-  }
-})();
+const util = require('util');
 {
-  exports.cl = console.$native.log;
-  exports.clw = console.$native.warn;
-  exports.cle = console.$native.error;
+  exports.cl = function () {
+    process.stdout.write(util.format.apply(this, arguments) + '\n');
+  };
+  exports.cle = function () {
+    process.stderr.write(util.format.apply(this, arguments) + '\n');
+  };
 }
