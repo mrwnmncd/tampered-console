@@ -1,6 +1,6 @@
 {
   "name": "@mrwnmncd/tampered-console",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Decorated Node Console",
   "main": "src/index.js",
   "repository": {
@@ -22,6 +22,9 @@
     "cli"
   ],
   "author": "mrwnmncd",
+  "contributors": [
+    "kxmndz"
+  ],
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.1.1",
