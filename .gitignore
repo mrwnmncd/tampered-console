@@ -107,3 +107,4 @@ dist
 # custom ignore
 docs
 package.github.json
+package.npm.json
