@@ -41,6 +41,16 @@ module.exports = function () {
   }
   {
     Console.log(i++);
+    Console.globalConsole();
+    // || Console.globalConsole(true); || Console.globalConsole({ fancy: true });
+    console.log('modified global console.log');
+    console.worker('modified global console.worker');
+    console.warn('modified global console.warn');
+    console.error('modified global console.error');
+    console.debug('modified global console.debug');
+  }
+  {
+    Console.log(i++);
     Console.globalConsole(true);
     // || Console.globalConsole({ fancy: true });
     console.log('modified boolean-true-global console.log');
