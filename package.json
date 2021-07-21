@@ -1,8 +1,14 @@
 {
   "name": "@mrwnmncd/tampered-console",
-  "version": "2.0.0",
-  "description": "Decorated Node Console",
+  "version": "2.2.0",
+  "description": "Decorated Node.js Console",
   "main": "src/index.js",
+  "author": {
+		"name": "Mharwin Moncada",
+		"email": "mharwinmoncada@icloud.com",
+		"url": "http://mrwnmncd.com"
+	},
+  "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mrwnmncd/tampered-console.git"
@@ -10,24 +16,23 @@
   "bugs": {
     "url": "https://github.com/mrwnmncd/tampered-console/issues"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
-  "scripts": {
-    "ci": "node test/ci.js"
-  },
-  "keywords": [
-    "fancy-console",
-    "console",
-    "cli"
-  ],
-  "author": "mrwnmncd",
   "contributors": [
     "kxmndz"
   ],
-  "license": "ISC",
+  "scripts": {
+    "ci": "node test/ci.js"
+  },
   "dependencies": {
     "chalk": "^4.1.1",
     "debug": "^4.3.2"
+  },
+  "keywords": [
+    "fancy",
+    "tampered-console",
+    "console",
+    "cli"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
