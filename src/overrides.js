@@ -25,17 +25,25 @@ function globalConsole(option) {
         globalNamespace = true;
         break;
       case 'object':
-        const { namespace } = option;
+        const { fancy, namespace } = option;
+        switch (typeof fancy) {
+          case 'boolean':
+            overrideNative = fancy;
+            break;
+          default:
+            overrideNative = true;
+            break;
+        }
         switch (typeof namespace) {
           case 'boolean':
             globalNamespace = namespace;
             break;
           case 'string':
           case 'number':
+            overrideNative = true;
+            globalNamespace = true;
             autoNamespace = option;
             option = namespace;
-            break;
-          default:
             break;
         }
         break;
