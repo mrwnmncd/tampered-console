@@ -1,12 +1,7 @@
-/*
-mrwnmncd (c) 2021
-https://github.com/mrwnmncd 
-*/
 'use strict';
-
+const Console = require('./console');
 {
-  module.exports = require('./classes/console');
-  module.exports.inspect = require('./classes/inspected-console');
-  const { globalConsole } = require('./overrides');
-  module.exports.globalConsole = globalConsole;
+  module.exports = Console;
+  module.exports.globalConsole = require('./override');
+  module.exports.namespace = Console.namespaceConsole;
 }
