@@ -1,13 +1,13 @@
 {
   "name": "@mrwnmncd/tampered-console",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Decorated Node.js Console",
   "main": "src/index.js",
   "author": {
-		"name": "Mharwin Moncada",
-		"email": "mharwinmoncada@icloud.com",
-		"url": "http://mrwnmncd.com"
-	},
+    "name": "Mharwin Moncada",
+    "email": "mharwinmoncada@icloud.com",
+    "url": "http://mrwnmncd.com"
+  },
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
@@ -21,10 +21,6 @@
   ],
   "scripts": {
     "ci": "node test/ci.js"
-  },
-  "dependencies": {
-    "chalk": "^4.1.1",
-    "debug": "^4.3.2"
   },
   "keywords": [
     "fancy",
