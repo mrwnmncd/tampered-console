@@ -1,4 +1,3 @@
 'use strict';
-require('../test/core/bruteforce')();
-require('../test/core/spread')();
+require('./bruteforce')();
 /* CI/CD Script */

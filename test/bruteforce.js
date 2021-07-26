@@ -1,5 +1,5 @@
 module.exports = function () {
-  const Console = require('../../src');
+  const Console = require('../src');
   let i = 0;
   {
     Console.log(i++);
@@ -14,13 +14,13 @@ module.exports = function () {
       Console.error('static Console.error');
       Console.debug('static Console.debug');
     }
-    {
-      Console.log(i++);
-      Console.inspect.log('static inspected Console.log');
-      Console.inspect.worker('static inspected Console.worker');
-      Console.inspect.warn('static inspected Console.warn');
-      Console.inspect.error('static inspected Console.error');
-    }
+    // {
+    //   Console.log(i++);
+    //   Console.inspect.log('static inspected Console.log');
+    //   Console.inspect.worker('static inspected Console.worker');
+    //   Console.inspect.warn('static inspected Console.warn');
+    //   Console.inspect.error('static inspected Console.error');
+    // }
   }
   {
     Console.log(i++);
@@ -31,13 +31,13 @@ module.exports = function () {
     new Console().debug('instance Console.debug');
   }
   {
-      Console.log(i++);
-      // new Console({ name: string }) || new Console(string);
-      new Console('ci').log('instance string-named Console.log');
-      new Console('ci').worker('instance string-named Console.worker');
-      new Console('ci').warn('instance string-named Console.warn');
-      new Console('ci').error('instance string-named Console.error');
-      new Console('ci').debug('instance string-named Console.debug');
+    Console.log(i++);
+    // new Console({ name: string }) || new Console(string);
+    new Console('ci').log('instance string-named Console.log');
+    new Console('ci').worker('instance string-named Console.worker');
+    new Console('ci').warn('instance string-named Console.warn');
+    new Console('ci').error('instance string-named Console.error');
+    new Console('ci').debug('instance string-named Console.debug');
   }
   {
     Console.log(i++);
@@ -95,7 +95,7 @@ module.exports = function () {
       {
         13;
         Console.log(i++);
-        Console.globalConsole({ inspect: false });
+        Console.globalConsole({});
         // || Console.globalConsole(true);
         console.log('modified object-false-inspect global console.log');
         console.worker('modified object-false-inspect global console.worker');
@@ -157,7 +157,7 @@ module.exports = function () {
     }
     {
       Console.log(i++);
-      Console.globalConsole({ fancy: false, inspect: false, namespace: false });
+      Console.globalConsole({ fancy: false, namespace: false });
       // || Console.globalConsole(false);
       console.log('native ~ console.log');
       // console worker disabled
@@ -167,7 +167,7 @@ module.exports = function () {
     }
     {
       Console.log(i++);
-      Console.globalConsole({ fancy: true, inspect: false, namespace: false });
+      Console.globalConsole({ fancy: true, namespace: false });
       // || Console.globalConsole({ fancy: true }); || Console.globalConsole(true);
       console.log('native ~ fancy ~ console.log');
       console.worker('native ~ fancy ~ console.worker');
@@ -187,7 +187,7 @@ module.exports = function () {
     }
     {
       Console.log(i++);
-      Console.globalConsole({ fancy: false, inspect: false, namespace: true });
+      Console.globalConsole({ fancy: false, namespace: true });
       /* 0 0 1 is assumed 1 0 1 */
       // || Console.globalConsole({ namespace: true });
       console.log('ci')('native ~ fancy:namespace ~ console.log');
@@ -199,7 +199,7 @@ module.exports = function () {
     {
       22;
       Console.log(i++);
-      Console.globalConsole({ fancy: true, inspect: false, namespace: true });
+      Console.globalConsole({ fancy: true, namespace: true });
       // || Console.globalConsole({ namespace: true });
       console.log('ci')('native ~ fancy-namespace ~ console.log');
       console.worker('ci')('native ~ fancy-namespace ~ console.worker');
