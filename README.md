@@ -1,31 +1,15 @@
 # Tampered Console 
 
-Tampered console is just a console relay which adds prefix to standard streams and inspect arguments.
+Tampered console is just a console relay which adds prefix to standard streams writes.
 Tampered console is class-defined. Properties are accessible even without instanciating the Console object.
-Instances of Tampered Console also supports namespace. So keeping track of console logs are made easy. Objects can also be elucidated with the inspect option.
+Instances of Tampered Console also supports namespace. So keeping track of console logs are made easy.
 
 --- 
 
-### Install NPM Package
-
-#### NPM CLI
+### Install Package
 ```
-npm install @mrwnmncd/tampered-console
+npm install tampered-console
 ```
-
---- 
-### Dependencies
-
-
-|NPM Package | Repository|
-|--|--|
-|[`debug`](https://www.npmjs.com/package/debug)|[`visionmedia/debug`](https://github.com/visionmedia/debug)|
-|[`chalk`](https://www.npmjs.com/package/chalk)|[`chalk/chalk`](https://github.com/chalk/chalk)|
-
-
-
 ---
 
-### Examples
-
-> *examples are still being worked on in the repository's wiki...*
+***This README is quite boring yet, how about checking [tampered-console.js.org](http://tampered-console.js.org)***
