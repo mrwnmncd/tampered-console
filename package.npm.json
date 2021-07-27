@@ -1,13 +1,13 @@
 {
-  "name": "@mrwnmncd/tampered-console",
+  "name": "tampered-console",
   "version": "3.0.0",
   "description": "Decorated Node.js Console",
   "main": "src/index.js",
   "author": {
-    "name": "Mharwin Moncada",
-    "email": "mharwinmoncada@icloud.com",
-    "url": "http://mrwnmncd.com"
-  },
+		"name": "Mharwin Moncada",
+		"email": "mharwinmoncada@icloud.com",
+		"url": "http://mrwnmncd.com"
+	},
   "license": "SEE LICENSE IN LICENSE.md",
   "repository": {
     "type": "git",
@@ -19,11 +19,8 @@
   "contributors": [
     "kxmndz"
   ],
-  "files": [
-    "src", "lib"
-  ],
   "scripts": {
-    "test_bruteforce": "node test/ci.js"
+    "ci": "node test/ci.js"
   },
   "keywords": [
     "fancy",
