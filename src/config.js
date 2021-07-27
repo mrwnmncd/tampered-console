@@ -1,5 +1,5 @@
 {
-  let cli = null;
+  let cli;
   const color = require('../lib/console-color');
   if (color.stdout) cli = 'ansi';
   if (color.stdout.has256) cli = 'ansi256';
