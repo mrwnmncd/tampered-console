@@ -1,7 +1,11 @@
 'use strict';
-const util = require('util');
 const { stdout, stderr } = require('./exports');
 const { writeStream } = require('./core/write');
+/* 
+ TODO : console.input;
+ - listeners ['stream input']
+ - check descriptor compatibility if there's any
+*/
 
 const namespaceConsole = {
   /**
@@ -24,6 +28,7 @@ const namespaceConsole = {
       writeStream({ prefix: 'worker', namespace }, stdout, ...args);
     };
   },
+  // TODO : support console.trace; [ 'trace log be dark grey, say #a9a9a9 or something' ]
   /**
    * namespaceConsole
    * @param {String} namespace The namespace concatenated to the prefix.
@@ -71,6 +76,7 @@ class Console {
     if (this._namespace) return namespaceConsole.worker(this._namespace)(...args);
     writeStream('worker', stdout, ...args);
   }
+  // TODO : support console.trace; [ 'trace log be dark grey, say #a9a9a9 or something' ]
   debug(...args) {
     if (this._namespace) return namespaceConsole.debug(this._namespace)(...args);
     writeStream('debug', stdout, ...args);
@@ -89,6 +95,7 @@ class Console {
   static worker(...args) {
     writeStream('worker', stdout, ...args)
   }
+  // TODO : support console.trace; [ 'trace log be dark grey, say #a9a9a9 or something' ]
   static debug(...args) {
     writeStream('debug', stderr, ...args)
   }
