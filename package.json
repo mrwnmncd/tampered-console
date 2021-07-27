@@ -20,7 +20,7 @@
     "kxmndz"
   ],
   "scripts": {
-    "ci": "node test/ci.js"
+    "test_bruteforce": "node test/ci.js"
   },
   "keywords": [
     "fancy",
