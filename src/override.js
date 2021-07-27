@@ -82,6 +82,7 @@ function globalConsole(option) {
     }
   }
   if (!overrideNative || overrideNative === false) {
+    if (console.worker) delete console.worker;
     console.log = function () {
       process.stdout.write(util.format.apply(this, arguments) + '\r\n');
     };
